@@ -17,12 +17,18 @@ const fetchPokemons = async (url) => {
 }
 
 //Función para traer los detalles de un pokemon
-async function fetchPokemonDetails(url) {
+const fetchPokemonDetails = async (url) => {
     const response = await fetch(url);
     return await response.json();
 }
-
-async function displayPokemons(url) {
+const scrollUp = () => {
+    window.scroll({
+        top: 100,
+        left: 100,
+        behavior: "smooth",
+      });
+};
+const displayPokemons = async (url) => {
     const pokemons = await fetchPokemons(url);
     const divCards = pokemonContainer.querySelectorAll('.pokemon-card');
     divCards.forEach(div => div.remove());
@@ -32,14 +38,10 @@ async function displayPokemons(url) {
         details.name = details.name.toUpperCase();
         createPokemonCard(details);
     }
-    window.scroll({
-        top: 0,
-        left: 100,
-        behavior: "smooth",
-      });
+    scrollUp();
 }
 
-function createPokemonCard(pokemon) {
+const createPokemonCard = (pokemon) => {
     const card = document.createElement('div');
     card.classList.add('pokemon-card');
 

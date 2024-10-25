@@ -53,7 +53,6 @@ function createPokemonCard(pokemon) {
     pokemonContainer.appendChild(card);
 }
 const back = () => {
-    console.log(last)
     displayPokemons(last);
 };
 const forward = () => {

@@ -13,6 +13,7 @@ background: linear-gradient(90deg, rgba(21,0,36,0.02573529411764708) 0%, rgba(18
 
 h1 {
     text-align: center;
+    margin-top: -10px;
 }
 
 .pokemon-container {

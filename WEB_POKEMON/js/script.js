@@ -32,6 +32,11 @@ async function displayPokemons(url) {
         details.name = details.name.toUpperCase();
         createPokemonCard(details);
     }
+    window.scroll({
+        top: 0,
+        left: 100,
+        behavior: "smooth",
+      });
 }
 
 function createPokemonCard(pokemon) {
